@@ -56,14 +56,12 @@ class Address {
   final String suite;
   final String city;
   final String zipcode;
-  final Geo geo;
 
   Address({
     required this.street,
     required this.suite,
     required this.city,
     required this.zipcode,
-    required this.geo,
   });
 
   factory Address.fromJson(Map<String, dynamic> json) => Address(
@@ -71,7 +69,6 @@ class Address {
         suite: json["suite"],
         city: json["city"],
         zipcode: json["zipcode"],
-        geo: Geo.fromJson(json["geo"]),
       );
 
   Map<String, dynamic> toJson() => {
@@ -79,7 +76,6 @@ class Address {
         "suite": suite,
         "city": city,
         "zipcode": zipcode,
-        "geo": geo.toJson(),
       };
 }
 

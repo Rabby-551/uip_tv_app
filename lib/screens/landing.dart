@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:uip_tv_app/screens/api_data_page/api_data_screen.dart';
+import 'package:uip_tv_app/screens/cache_data_page/cache_data_screen.dart';
 import 'package:uip_tv_app/screens/home_screen.dart';
 
 class LandingScreen extends StatelessWidget {
@@ -33,6 +34,18 @@ class LandingScreen extends StatelessWidget {
                   );
                 },
                 child: const Text('Api Data page')),
+            const SizedBox(
+              height: 10,
+            ),
+            FilledButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const CacheDataScreen()),
+                  );
+                },
+                child: const Text('Cache Data page')),
           ],
         ),
       ),
